@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --color-status-low: #22c55e; /* Green for Low */
+  --color-status-medium: #f59e0b; /* Yellow for Medium */
+  --color-status-high: #ef4444; /* Red for High */
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@layer components {
+  .card-base {
+    @apply w-full max-w-md p-4 mb-4 bg-bg-main border border-border-default rounded-lg;
+  }
+
+  .input-base {
+    @apply w-full px-3 py-2 border border-border-default rounded-md focus:outline-none focus:border-border-focus;
+  }
+
+  .btn-base {
+    @apply px-3 py-1.5 text-sm rounded-md transition-colors;
+  }
+
+  .btn-primary {
+    @apply btn-base text-bg-main bg-text-primary hover:bg-text-secondary;
+  }
+
+  .btn-secondary {
+    @apply btn-base text-text-secondary bg-bg-main border border-border-default hover:bg-bg-hover;
+  }
+
+  .btn-icon {
+    @apply p-2 rounded-md transition-colors;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 10px;
+}
