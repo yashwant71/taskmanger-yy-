@@ -5,6 +5,7 @@
 This project is a task manager application that allows users to manage their tasks efficiently.
 
 ## Prerequisites
+
 - Node.js (version 14 or higher)
 
 ## Installation
@@ -23,6 +24,7 @@ This project is a task manager application that allows users to manage their tas
 - Add your mongo url in `.env` file in the backend of the project, example below:
   ```
   MONGO_URL=<your_mongo_db_connection_string>
+  PORT=3000
   ```
 
 ## Starting the Project
